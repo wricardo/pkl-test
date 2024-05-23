@@ -1,0 +1,11 @@
+@go.Package { name = "bitbucket.org/zetaactions/pkltest/services/zasper" }
+
+open module Zasper
+
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.5.0#/go.pkl"
+
+
+
+enabled: Boolean = true
+
+name: String = "Zasper"

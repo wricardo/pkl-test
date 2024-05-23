@@ -1,6 +1,0 @@
-module AppConfig
-
-appName: String(!isEmpty)
-version: String(!isEmpty)
-debug: Boolean
-

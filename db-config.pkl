@@ -1,7 +1,0 @@
-module DbConfig
-
-username: String(!isEmpty)
-password: String(!isEmpty)
-host: String(!isEmpty)
-port: Int(isBetween(1024, 65535))
-dbName: String(!isEmpty)

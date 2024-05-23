@@ -1,0 +1,17 @@
+@go.Package { name = "bitbucket.org/zetaactions/pkltest/services/zuri" }
+
+open module Zuri
+
+import "../../lib/postgres.pkl" as pg
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.5.0#/go.pkl"
+
+enabled: Boolean = true
+
+class ZuriDb extends pg.ConnectionDetails {
+}
+
+postgres: pg.ConnectionDetails = new ZuriDb{
+    dbName = "zuri"
+}
+
+somethingzurispecific: String = "zuri"

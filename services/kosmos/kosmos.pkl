@@ -1,0 +1,21 @@
+@go.Package { name = "bitbucket.org/zetaactions/pkltest/services/kosmos" }
+open module Kosmos
+
+import "../../lib/postgres.pkl" as pg
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.5.0#/go.pkl"
+
+
+
+class Postgres extends pg.ConnectionDetails {
+    host: String
+    dbName = "kosmos"
+}
+
+
+enabled: Boolean = true
+
+mykey: String(!isEmpty)
+
+postgres: Postgres
+
+something = pg.something

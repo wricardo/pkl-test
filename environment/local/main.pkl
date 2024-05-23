@@ -1,0 +1,38 @@
+@go.Package { name = "bitbucket.org/zetaactions/pkltest" }
+
+module pkltest
+
+// amends "../../formation.pkl"
+import "../../services/zuri/zuri.pkl" as pkgZuri
+import "../../services/kosmos/kosmos.pkl" as pkgKosmos
+import "../../services/zasper/zasper.pkl" as pkgZasper
+import "../../lib/postgres.pkl" as pg
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.5.0#/go.pkl"
+
+kosmos: pkgKosmos= new pkgKosmos {
+    enabled = true
+
+    postgres {
+        username = "root"
+        password = "root"
+        host = "localhost"
+    }
+    
+    something  = "this local"
+
+    mykey = "fake"
+
+}
+
+zuri: pkgZuri = new pkgZuri {
+    enabled = true
+
+    postgres {
+        username = "root"
+        password = "root"
+        host = "localhost"
+    }
+    
+
+    somethingzurispecific = "zurionlocal"
+}

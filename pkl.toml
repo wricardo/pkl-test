@@ -1,5 +1,5 @@
 [package]
-name = "pkl-test"
+name = "pkltest"
 version = "1.0.0"
 description = "Centralized configuration repository for the application"
 
