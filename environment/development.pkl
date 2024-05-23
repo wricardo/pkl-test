@@ -8,8 +8,6 @@ AppConfig {
 }
 
 DbConfig {
-  username = $env:DEV_DB_USERNAME
-  password = $env:DEV_DB_PASSWORD
   host = "localhost"
   port = 5432
   dbName = "myapp_dev"
