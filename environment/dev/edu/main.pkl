@@ -1,0 +1,40 @@
+@go.Package { name = "bitbucket.org/zetaactions/pkltest" }
+
+amends "../dev.pkl"
+
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.5.0#/go.pkl"
+
+import "../../../lib/postgres/connection_details.pkl" as PostgresConnectionDetails
+
+kosmos {
+    enabled = true
+    mykey = "verysecurekey"
+    postgres {
+        username = "zuri"
+        password = "verysecure"
+    }
+}
+
+zuri {
+    enabled = true
+
+    postgres {
+        username = "zuri"
+        password = "verysecure"
+    }
+    
+
+    redis {
+        db = 1
+    }
+}
+zasper {
+	redises = new Listing<PostgresConnectionDetails>{
+		new PostgresConnectionDetails {
+			dbName = "testing"
+			username = "test"
+			password = "euaeau"
+			host = "localhost"
+		}
+	}
+}

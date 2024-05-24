@@ -5,14 +5,17 @@ import (
 	"context"
 
 	"bitbucket.org/zetaactions/pkltest/services/kosmos"
+	"bitbucket.org/zetaactions/pkltest/services/zasper"
 	"bitbucket.org/zetaactions/pkltest/services/zuri"
 	"github.com/apple/pkl-go/pkl"
 )
 
 type Formation struct {
-	Zuri zuri.Zuri `pkl:"zuri"`
+	Zuri *zuri.Zuri `pkl:"zuri"`
 
-	Kosmos kosmos.Kosmos `pkl:"kosmos"`
+	Kosmos *kosmos.Kosmos `pkl:"kosmos"`
+
+	Zasper *zasper.Zasper `pkl:"zasper"`
 }
 
 // LoadFromPath loads the pkl module at the given path and evaluates it into a Formation

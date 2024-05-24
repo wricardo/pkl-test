@@ -1,17 +1,22 @@
 @go.Package { name = "bitbucket.org/zetaactions/pkltest/services/zuri" }
 
-open module Zuri
+module Zuri
 
-import "../../lib/postgres.pkl" as pg
 import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.5.0#/go.pkl"
+import "../../lib/postgres/connection_details.pkl" as PostgresConnectionDetails
+import "../../lib/redis/connection_details.pkl" as redisConnectionDetails
 
 enabled: Boolean = true
 
-class ZuriDb extends pg.ConnectionDetails {
-}
 
-postgres: pg.ConnectionDetails = new ZuriDb{
+postgres: PostgresConnectionDetails = new {
     dbName = "zuri"
 }
 
-somethingzurispecific: String = "zuri"
+
+redis: redisConnectionDetails = new redisConnectionDetails {
+    host = "default zuri redis host"
+    db = 2
+}
+
+zuri_realm_key: String(!isEmpty) = "TBDDDD"

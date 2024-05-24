@@ -1,0 +1,8 @@
+@go.Package { name = "bitbucket.org/zetaactions/pkltest/lib/redis" }
+module lib.redis.ConnectionDetails 
+
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.5.0#/go.pkl"
+
+host: String
+port: Int = 6379
+db: Int = 0

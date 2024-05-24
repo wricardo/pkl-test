@@ -1,11 +1,18 @@
 @go.Package { name = "bitbucket.org/zetaactions/pkltest/services/zasper" }
 
-open module Zasper
+module Zasper
 
 import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.5.0#/go.pkl"
-
-
+import "../../lib/postgres/connection_details.pkl" as PostgresConnectionDetails
 
 enabled: Boolean = true
 
-name: String = "Zasper"
+zasper_something: String = "Zasper simple value"
+
+some_array:Listing = new Listing{
+	"a"
+	"b"
+}
+
+
+redises:Listing<PostgresConnectionDetails> 

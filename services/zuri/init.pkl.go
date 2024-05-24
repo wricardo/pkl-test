@@ -4,6 +4,5 @@ package zuri
 import "github.com/apple/pkl-go/pkl"
 
 func init() {
-	pkl.RegisterMapping("Zuri", ZuriImpl{})
-	pkl.RegisterMapping("Zuri#ZuriDb", ZuriDbImpl{})
+	pkl.RegisterMapping("Zuri", Zuri{})
 }

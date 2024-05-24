@@ -8,4 +8,4 @@ generate: clean
 	# mv bitbucket.org/zetaactions/pkl-test/* .
 	# rm -rf bitbucket.org
 eval:
-	pkl eval --allowed-resources "http://*,prop:*" --format yaml environment/dev-edu/main.pkl
+	pkl eval --allowed-resources "http://*,prop:*" --format json environment/dev/edu/main.pkl
