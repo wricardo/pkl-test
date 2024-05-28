@@ -1,0 +1,31 @@
+@go.Package { name = "bitbucket.org/zetaactions/pklpoc" }
+
+amends "../local.pkl"
+
+// import "../../lib/postgres.pkl" as pg
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.5.0#/go.pkl"
+
+kosmos  {
+    enabled = true
+
+    postgres {
+        username = "root"
+        password = "root"
+    }
+    
+    mykey = "fake"
+
+}
+
+zuri  {
+    enabled = true
+
+    postgres {
+        username = "root"
+        password = "root"
+        host = "localhost"
+    }
+}
+
+zasper {
+}

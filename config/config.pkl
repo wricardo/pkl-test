@@ -1,0 +1,12 @@
+@go.Package { name = "bitbucket.org/zetaactions/pklpoc/config" }
+module Config
+
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.6.0#/go.pkl"
+
+import "./services/zuri/zuri.pkl" as pkgZuri
+import "./services/kosmos/kosmos.pkl" as pkgKosmos
+import "./services/zasper/zasper.pkl" as pkgZasper
+
+zuri: pkgZuri = pkgZuri
+kosmos: pkgKosmos = pkgKosmos
+zasper: pkgZasper = pkgZasper

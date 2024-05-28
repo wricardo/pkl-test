@@ -1,0 +1,22 @@
+@go.Package { name = "bitbucket.org/zetaactions/pklpoc" }
+
+amends "../../config.pkl"
+
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.5.0#/go.pkl"
+
+kosmos {
+    enabled = false
+    postgres {
+        host = "localhost"
+    }
+}
+
+zuri {
+    enabled = true
+    postgres {
+        host = "locahost"
+    }
+    redis {
+        host = "redis.localhost"
+    }
+}

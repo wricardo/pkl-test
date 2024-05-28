@@ -1,0 +1,6 @@
+@go.Package { name = "bitbucket.org/zetaactions/pklpoc/config/lib/postgres" }
+module lib.postgres.Postgres 
+
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.5.0#/go.pkl"
+
+something: String

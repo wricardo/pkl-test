@@ -1,0 +1,10 @@
+@go.Package { name = "bitbucket.org/zetaactions/pklpoc/config/lib/postgres" }
+module lib.postgres.ConnectionDetails 
+
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.5.0#/go.pkl"
+
+username: String(!isEmpty)
+password: String(!isEmpty)
+host: String(!isEmpty)
+port: Int(isBetween(1024, 65535)) = 5432
+dbName: String(!isEmpty)

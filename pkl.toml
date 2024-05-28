@@ -1,8 +1,0 @@
-[package]
-name = "pkltest"
-version = "1.0.0"
-description = "Centralized configuration repository for the application"
-
-[dependencies]
-# Define dependencies on other Pkl packages if needed
-
